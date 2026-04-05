@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+.bg-main {
+    background: linear-gradient(142deg, rgb(236, 248, 253) 0%, rgba(245, 254, 255, 1) 30%, rgb(237, 227, 220) 100%);
+}
+
+.bg-gradient {
+    background: -webkit-linear-gradient(142deg, rgb(0, 179, 255) 0%, rgb(251, 184, 16) 100%);
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(142deg, rgb(0, 179, 255) 0%, rgb(251, 184, 16) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
