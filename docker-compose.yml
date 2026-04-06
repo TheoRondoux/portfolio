@@ -7,12 +7,12 @@ services:
     container_name: portfolio
     restart: unless-stopped
     networks:
-      - thrx_mariage-cj
+      - thrx_portfolio
     ports:
       - "5173:8080"
     environment:
       - NODE_ENV=production
 
 networks:
-  portfolio:
+  thrx_portfolio:
     external: true
