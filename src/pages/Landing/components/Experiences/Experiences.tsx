@@ -9,7 +9,7 @@ import thalesLogo from "../../../../assets/img/companies/thales.jpg";
 
 const Experiences: React.FC = () => {
     return (
-        <section id={"experiences"} className={"w-full flex flex-col gap-4 mt-10 lg:mt-20"}>
+        <section id={"experiences"} className={"w-full flex flex-col gap-4 mt-10 lg:mt-20 scroll-mt-20"}>
             <div className={"w-full flex flex-row gap-3 items-end"}>
                 <IconDeviceLaptop className={"size-9"}/>
                 <h2 className={"text-4xl font-bold"}>Sur le terrain</h2>

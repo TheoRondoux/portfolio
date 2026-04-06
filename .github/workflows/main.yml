@@ -1,0 +1,50 @@
+name: Deploy React & Vite App
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.VPS_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Sync project files to VPS via rsync
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=~/.ssh/known_hosts" \
+            --exclude=node_modules \
+            --exclude=dist \
+            ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_PROJECT_PATH }}/
+
+      - name: Build & start Docker on VPS
+        run: |
+          ssh -i ~/.ssh/id_rsa -o UserKnownHostsFile=~/.ssh/known_hosts ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+            export DOCKER_NETWORK=${{ secrets.DOCKER_NETWORK }}
+            export DOMAIN=${{ secrets.DOMAIN }}
+            cd ${{ secrets.VPS_PROJECT_PATH }}
+
+            echo "➡️ Arrêt de l'ancien conteneur..."
+            docker compose down
+
+            echo "🚀 Build de l'image (avec cache)..."
+            docker compose build
+
+            echo "📦 Démarrage du conteneur..."
+            docker compose up -d
+
+            echo "🧹 Nettoyage des images inutilisées..."
+            docker image prune -f
+          EOF

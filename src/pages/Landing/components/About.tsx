@@ -66,7 +66,7 @@ export const About: React.FC = () => {
     ];
 
     return (
-        <section id={"about"} className={"w-full flex flex-col gap-4 mt-20 lg:mt-50"}>
+        <section id={"about"} className={"w-full flex flex-col gap-4 mt-20 lg:mt-50 scroll-mt-20"}>
             <div className={"relative w-full flex flex-col gap-4 justify-start"}>
                 <div className={"w-full flex flex-row gap-3 items-start md:items-end"}>
                     <IconCodeDots className={"size-9"}/>
