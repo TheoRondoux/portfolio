@@ -9,7 +9,7 @@ services:
     networks:
       - thrx_portfolio
     ports:
-      - "5173:8080"
+      - "5173:8081"
     environment:
       - NODE_ENV=production
 
