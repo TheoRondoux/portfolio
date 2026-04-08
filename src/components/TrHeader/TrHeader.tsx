@@ -47,13 +47,13 @@ const TrHeader: React.FC = () => {
                             <TrCard size={"small"}>
                                 <nav className={"flex flex-col items-start gap-2 w-full"}>
                                     <a
-                                        href={"#about"} onClick={handleToggleBurgerMenu}
+                                        href={"/#about"} onClick={handleToggleBurgerMenu}
                                         className={"px-4 py-2 rounded-xl shadow-sm w-full flex flex-row justify-between"}
                                     >
                                         À propos
                                     </a>
                                     <a
-                                        href={"#experiences"} onClick={handleToggleBurgerMenu}
+                                        href={"/#experiences"} onClick={handleToggleBurgerMenu}
                                         className={"px-4 py-2 rounded-xl shadow-sm w-full flex flex-row justify-between"}
                                     >
                                         Expériences
@@ -70,8 +70,8 @@ const TrHeader: React.FC = () => {
                 </div>
             </div>
             <nav className={`hidden sm:flex flex-row items-center gap-4 px-4 py-2 text-lg ${styleClasses}`}>
-                <a href={"#about"} className={"px-4 py-2 rounded-full hover:bg-white/20 hover:shadow-md hover:cursor-pointer transition-all ease-in-out active:scale-95"}>À propos</a>
-                <a href={"#experiences"} className={"p-2 rounded-full hover:bg-white/20 hover:shadow-md hover:cursor-pointer transition-all ease-in-out active:scale-95"}>Expériences</a>
+                <a href={"/#about"} className={"px-4 py-2 rounded-full hover:bg-white/20 hover:shadow-md hover:cursor-pointer transition-all ease-in-out active:scale-95"}>À propos</a>
+                <a href={"/#experiences"} className={"p-2 rounded-full hover:bg-white/20 hover:shadow-md hover:cursor-pointer transition-all ease-in-out active:scale-95"}>Expériences</a>
             </nav>
             <div className={"hidden sm:flex flex-row items-center gap-4"}>
                 <TrButton

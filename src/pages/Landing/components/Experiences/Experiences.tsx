@@ -19,7 +19,7 @@ const Experiences: React.FC = () => {
                 companyLogo={sogetiLogo}
                 position={"Associate Software Engineer"}
                 startDate={"2024-09-01"}
-                description={"En tant que consultant IT, j’interviens sur des missions clients, où je développe des solutions applicatives et contribue au maintien en conditions opérationnelles. Référent IA à l’agence de Lille, j’accompagne les équipes dans la compréhension et l’adoption des usages de l’Intelligence Artificielle à travers ateliers, démonstrations et événements. ’interviens également comme speaker pour sensibilier, partager les pratiques et outils d’IA auprès de profils techniques et produit lors d’événements."}
+                description={"En tant que consultant IT, j’interviens sur des missions clients, où je développe des solutions applicatives et contribue au maintien en conditions opérationnelles. Référent IA à l’agence de Lille, j’accompagne les équipes dans la compréhension et l’adoption des usages de l’Intelligence Artificielle à travers ateliers, démonstrations et événements. J'interviens également comme speaker pour sensibiliser, partager les pratiques et outils d’IA auprès de profils techniques et produit lors d’événements."}
                 keyPoints={["Accompagnement des collaborateurs sur les usages de l’IA", "Développement de solutions applicatives", "Maintien en conditions opérationnelles", "Interventions en tant que speaker lors d’événements internes et externes"]}
             >
                 <div>

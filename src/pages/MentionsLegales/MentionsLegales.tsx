@@ -5,6 +5,7 @@ const MentionsLegales = () => {
     return (
         <Page>
             <div className={"flex flex-col w-full pt-30 gap-4"}>
+                <a href={"/"} className={"text-gray-500"}>← Retour à la page d'accueil</a>
                 <h1 className={"text-center text-2xl font-bold"}>Mentions légales</h1>
                 <p className={"text-justify text-lg"}>
                     Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie

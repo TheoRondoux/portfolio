@@ -6,6 +6,7 @@ const PolitiqueConfidentialite: React.FC = () => {
     return (
         <Page>
             <div className={"flex flex-col w-full pt-30 gap-4 h-full"}>
+                <a href={"/"} className={"text-gray-500"}>← Retour à la page d'accueil</a>
                 <h1 className={"text-center text-2xl font-bold"}>Politique de confidentialité</h1>
                 <LegalCategory title={"1. Informations générales"}>
                     <p>

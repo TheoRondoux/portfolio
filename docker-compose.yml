@@ -8,8 +8,6 @@ services:
     restart: unless-stopped
     networks:
       - thrx_portfolio
-    ports:
-      - "3000:8081"
     environment:
       - NODE_ENV=production
 
