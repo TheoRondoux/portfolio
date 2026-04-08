@@ -1,73 +1,130 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un portfolio personnel moderne et interactif construit avec **React**, **TypeScript**, **Tailwind CSS** et **Vite**.
 
-Currently, two official plugins are available:
+## 🎯 Caractéristiques
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ⚡ **Vite** : Build ultra-rapide et hot module replacement
+- ⚛️ **React 19** : Dernière version avec fonctionnalités modernes
+- 🎨 **Tailwind CSS** : Système de design utilitaire puissant
+- 📘 **TypeScript** : Code type-safe et robuste
+- 🛣️ **React Router** : Navigation fluide entre les pages
+- 🐳 **Docker** : Déploiement containerisé avec Nginx
+- ✨ **Responsive** : Design adaptable à tous les appareils
+- 📱 **Icons** : Icônes Tabler intégrées
 
-## React Compiler
+## 📁 Structure du Projet
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+portfolio/
+├── src/
+│   ├── components/          # Composants réutilisables
+│   │   ├── LegalCategory/
+│   │   ├── TrButton/
+│   │   ├── TrCard/
+│   │   ├── TrFooter/
+│   │   ├── TrHeader/
+│   │   └── TrSticker/
+│   ├── pages/              # Pages de l'application
+│   │   ├── Landing/        # Page d'accueil
+│   │   ├── MentionsLegales/
+│   │   └── PolitiqueConfidentialite/
+│   ├── layouts/            # Mises en page
+│   ├── router/             # Configuration du routeur
+│   ├── assets/             # Images et icônes
+│   ├── index.css           # Styles globaux
+│   └── main.tsx            # Point d'entrée React
+├── public/                 # Fichiers statiques
+├── docker-compose.yml      # Configuration Docker Compose
+├── Dockerfile              # Configuration Docker
+├── vite.config.ts          # Configuration Vite
+├── tsconfig.json          # Configuration TypeScript
+├── eslint.config.ts       # Configuration ESLint
+└── package.json           # Dépendances du projet
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Démarrage Rapide
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prérequis
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Node.js** 18+ ou **npm** 9+
+
+### Installation
+
+1. **Cloner le dépôt**
+
+2. **Installer les dépendances**
+   ```bash
+   npm install
+   ```
+
+3. **Lancer le serveur de développement**
+   ```bash
+   npm run dev
+   ```
+   L'application sera disponible à `http://localhost:3000`
+
+### Build pour la Production
+
+```bash
+npm run build
 ```
+
+Les fichiers compilés seront dans le dossier `dist/`.
+
+### Aperçu du Build
+
+```bash
+npm run preview
+```
+
+## 📦 Dépendances Principales
+
+### Production
+- **react** (^19.2.4) - Bibliothèque UI
+- **react-dom** (^19.2.4) - Rendu DOM
+- **react-router-dom** (^7.14.0) - Routage
+- **tailwindcss** (^4.2.2) - Framework CSS
+- **@tailwindcss/vite** (^4.2.2) - Plugin Vite
+- **@tabler/icons-react** (^3.41.1) - Icônes vectorielles
+
+### Développement
+- **typescript** (~5.9.3) - Langage typé
+- **vite** (^8.0.1) - Build tool
+- **@vitejs/plugin-react** (^6.0.1) - Plugin React pour Vite
+- **eslint** (^9.39.4) - Linter
+- **@types/react** (^19.2.14) - Types TypeScript
+
+## 🐳 Docker
+
+### Déploiement avec Docker
+
+1. **Construire l'image**
+   ```bash
+   docker build -t portfolio:latest .
+   ```
+
+2. **Lancer le conteneur**
+   ```bash
+   docker run -p 5173:5173 portfolio:latest
+   ```
+
+### Déploiement avec Docker Compose
+
+```bash
+docker-compose up
+```
+
+Le Dockerfile utilise une build multi-étapes :
+- **Étape 1** : Build avec Node.js
+- **Étape 2** : Serveur Nginx allégé pour la production
+
+## 📝 License
+
+Ce projet est sous license [MIT](LICENSE).
+
+## 👤 Auteur
+
+**Théo Rondoux** - Portfolio personnel
+
+---
