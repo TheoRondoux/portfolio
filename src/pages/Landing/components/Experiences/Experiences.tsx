@@ -1,7 +1,7 @@
 import React from "react";
 import {IconBriefcase, IconDeviceLaptop} from "@tabler/icons-react";
 import TrSticker from "../../../../components/TrSticker";
-import {WorkExperience} from "./WorkExperience.tsx";
+import {WorkExperience} from "./components/WorkExperience.tsx";
 
 import sogetiLogo from "../../../../assets/img/companies/sogeti.png";
 import decathlonLogo from "../../../../assets/img/companies/decathlon.png";

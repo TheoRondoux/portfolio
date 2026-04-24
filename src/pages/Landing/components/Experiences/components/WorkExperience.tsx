@@ -1,7 +1,7 @@
 import React from "react";
-import TrCard from "../../../../components/TrCard/TrCard";
+import TrCard from "../../../../../components/TrCard/TrCard.tsx";
 import {IconCalendar, IconId} from "@tabler/icons-react";
-import TrSticker from "../../../../components/TrSticker";
+import TrSticker from "../../../../../components/TrSticker";
 
 interface WorkExperienceProps {
     company: string;
