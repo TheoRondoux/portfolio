@@ -7,7 +7,7 @@ interface TrStickerProps {
     size?: "tiny" | "small" | "medium" | "large";
 }
 
-const defaultClasses = "flex flex-row justify-center items-center gap-2 bg-white/50 shadow-sm border border-gray-200 rounded-full whitespace-nowrap";
+const defaultClasses = "flex flex-row justify-center items-center gap-2 bg-white/50 shadow-sm border border-gray-200 rounded-full whitespace-nowrap h-fit";
 const dynamicClasses = "transition-transform duration-300 hover:-rotate-6";
 
 const TrSticker: React.FC<TrStickerProps> = ({

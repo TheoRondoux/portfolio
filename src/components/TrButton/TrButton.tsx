@@ -44,7 +44,7 @@ const TrButton: React.FC<TrButtonProps> = ({
 
     return (
         <button
-            className={`flex flex-row items-center gap-2 rounded-full transform transition-transform duration-300 hover:cursor-pointer hover:scale-103 active:scale-97 ${getVariantClasses()} ${getSizeClasses()}`}
+            className={`flex flex-row items-center gap-2 rounded-full w-fit transform transition-transform duration-300 hover:cursor-pointer hover:scale-103 active:scale-97 ${getVariantClasses()} ${getSizeClasses()}`}
             onClick={onClick}
         >
             {startSlot && <span className={"flex items-center"}>{startSlot}</span>}
