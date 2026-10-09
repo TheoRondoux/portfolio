@@ -33,8 +33,30 @@ const Experiences: React.FC = () => {
                         </div>
                         <div className={"grid grid-cols-1 lg:grid-cols-2 gap-4 pt-4"}>
                             <WorkExperience
+                                company={"Adeo"}
+                                startDate={"2026-08-03"}
+                                position={"Développeur Full Stack"}
+                                contentSize={"medium"}
+                            >
+                                <p className={"text-justify flex-1"}>
+                                    Développement d'une solution IA permettant de faciliter la création de configurateurs pour différentes entités du groupe.
+                                </p>
+                                <div className={"flex flex-row flex-wrap pt-4 gap-2"}>
+                                    <TrSticker title={"Java"} size={"small"}/>
+                                    <TrSticker title={"Spring Boot"} size={"small"}/>
+                                    <TrSticker title={"Spring AI"} size={"small"}/>
+                                    <TrSticker title={"Embabel"} size={"small"}/>
+                                    <TrSticker title={"Vue.js"} size={"small"}/>
+                                    <TrSticker title={"Typescript"} size={"small"}/>
+                                    <TrSticker title={"PostgreSQL"} size={"small"}/>
+                                    <TrSticker title={"Docker"} size={"small"}/>
+                                    <TrSticker title={"Datadog"} size={"small"}/>
+                                </div>
+                            </WorkExperience>
+                            <WorkExperience
                                 company={"Decathlon"}
                                 startDate={"2025-05-12"}
+                                endDate={"2026-08-01"}
                                 position={"Software Engineer"}
                                 contentSize={"medium"}
                             >
